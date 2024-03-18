@@ -150,7 +150,6 @@ def formula_plot(se_label, modelname, Dataset_name):
     with open('W_best_{i}.pkl'.format(i=Dataset_name), 'rb') as f:
         W1s, Wcss, Wdss, a, b, t1, t2, Spatial, final_accuracy = pickle.load(f)
 
-    # 公式的取值区间实际上是由W1s来确定的
     W1s = W1s.detach().numpy()
     # print(W1s.shape)
     Wcss = Wcss.numpy()
@@ -168,10 +167,8 @@ def formula_plot(se_label, modelname, Dataset_name):
     # print(np.shape(Wcss))
     dim = np.shape(a)[-1]
 
-    # 创建图形
     fig, ax = plt.subplots()
 
-    # 设置画布大小
     fig.set_size_inches(20, 6)
 
     Formula = r"$\quad$"
