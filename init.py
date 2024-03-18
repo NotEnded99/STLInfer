@@ -13,7 +13,7 @@ def set_random_seed(seed):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
-def convert_to_binary_labels(label, se_label): # 二分类，对标签进行划分 
+def convert_to_binary_labels(label, se_label): 
     outlabel = np.copy(label)
     outlabel[outlabel!=se_label]=-1
     outlabel[outlabel==se_label]=1
@@ -44,9 +44,8 @@ def minmax_normalize_samples(data, min_vals, max_vals, new_min=-1, new_max=1):
     
     normalized_data = np.zeros_like(data)
     # normalize each sample
-    for i in range(data.shape[0]):  # 遍历每个样本
-        for j in range(data.shape[1]):  # 遍历每个通道
-            # 对数据进行归一化
+    for i in range(data.shape[0]):  
+        for j in range(data.shape[1]):  
             normalized_data[i, j, :] = (data[i, j, :] - min_vals[j]) / (max_vals[j] - min_vals[j])*(new_max - new_min) + new_min
     return normalized_data
 
