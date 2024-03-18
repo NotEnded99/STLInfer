@@ -3,54 +3,6 @@ import pickle
 
 
 
-# def get_formula(Dataset_name):
-#     import matplotlib.pyplot as plt
-
-#     with open('W_best_{i}.pkl'.format(i=Dataset_name), 'rb') as f:
-#         W1s, Wcss, Wdss, a, b, t1, t2, Spatial, final_accuracy = pickle.load(f)
-#     W1s = W1s.detach().numpy()
-#     Wcss = Wcss.numpy()
-#     Wdss = Wdss.numpy()
-#     a = a.detach().numpy()
-#     b = b.detach().numpy()
-#     b = np.around(b, 3)
-#     t1 = t1.detach().numpy()
-#     t1 = np.around(t1, 1)
-#     t2 = t2.detach().numpy()
-#     t2 = np.around(t2, 1)
-#     final_accuracy = np.around(final_accuracy, 4)
-#     dim = np.shape(a)[2]
-
-#     # 创建图形
-#     fig, ax = plt.subplots()
-
-#     # 设置画布大小
-#     fig.set_size_inches(20, 6)
-#     Formula = r"\quad"
-#     for i in range(len(Wcss)):
-#         temp_formu = r"\quad"
-
-#         for j in range(len(b)):
-#             if Wcss[i, j] == 1:
-#                 # if sum(a)!=0:
-#                 variable = ""
-#                 for k in range(dim):
-#                     if a[j, i, k]==1:
-#                         variable += "+x_{k}".format(k=k)
-#                     elif a[j, i, k]==-1:
-#                         variable += "-x_{k}".format(k=k)
-#                 variable1 = "({z})".format(z=variable)
-
-#                 formu = r"{g}[{t1}, {t2}] {x} > {b}".format(g=Spatial[j], t1=t1[j, i], t2=t2[j, i], x = variable1, b=b[j, i])
-#                 if len(temp_formu)<8:
-#                     temp_formu =  temp_formu + formu
-#                 else:
-#                     temp_formu =  temp_formu +r"\wedge"+ formu
-#         Formula += temp_formu
-#     # print(Formula)
-#     Formula.replace("\\wedge", " \wedge ")
-#     Formula.replace("\\quad", "\quad ")
-#     return Formula
 
 # def new_get_formula( Dataset_name):
 
