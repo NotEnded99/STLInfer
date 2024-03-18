@@ -27,19 +27,6 @@ args = parser.parse_args()
 
 torch.set_default_dtype(torch.float64)
 
-# modelname = 'model_v12_v4' # model_v12_v3_ori model_v12_v4 'model_v15_bp'， model_v17_pso
-
-# work_dir = r'C:\Users\73175\Desktop\2023_paper_Learning_STL_via_NN\dataset\UCR_Processed'
-# save_dir = r'C:\Users\73175\Desktop\2023_paper_Learning_STL_via_NN\models\Mine_model_v12_v4'
-# work_dir = r'C:\Users\73175\Documents\工作文档\2023_paper_Learning_STL_via_NN\dataset\UCR_Processed'
-
-# name_list = ['Naval', 'BasicMotions', 'Epilepsy',  'Blink',  'ERing', 'FingerMovements', 
-#              'SelfRegulationSCP1', 'SelfRegulationSCP2','UWaveGestureLibrary', 'NATOPS']
-
-# name_list = ['Epilepsy']
-
-# number_of_trial = 5
-
 all_dataset_time = []
 all_dataset_time_mean = []
 
